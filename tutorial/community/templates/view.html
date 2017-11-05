@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>write</title>
+</head>
+<body>
+  Title : {{ article.title }}
+  <br>
+  Name : {{ article.name }}
+  <br>
+  Contents :{{ article.contents }}
+  <br>
+  Email : {{ article.email }}
+  <br>
+  File : <a href="{{ article.document.url }}"> {{article.document}}</a> <small>(Uploaded at: {{ article.uploaded_at }})</small>
+  <br><br>
+
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Team Deatil {{Student.party_number}}</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+<h1>Team {{Student.party_number}}</h1>
+<br>
+
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <td><B>Team number</B></td>
+            <td><B>Name</B></td>
+            <td><B>Email</B></td>
+            <td><B>Major</B></td>
+            <td><B>GPA</B></td>
+<!--            <td><B>지지하기</B></td>  -->
+        </tr>
+        </thead>
+        <tbody>
+        {% for student in students %}
+        <tr>
+            <td> Team - {{student.party_number}} </td>
+            <td> {{student.name}}</td>
+            <td> {{student.email}}</td>
+            <td> {{student.Major}}</td>
+            <td> {{student.GPA}}</td>
+
+
+        </tr>
+        {% endfor %}
+        <tbody>
+    </table>
+
+</div>
+</body>

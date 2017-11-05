@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>write</title>
+</head>
+<body>
+  <CENTER><B> Project Upload </B></CENTER>
+  <form action="" method="post">
+    {{ form.as_p }}
+    {% csrf_token %}
+    <button type="submit" onclick="/list" class="btn btn-primary">SAVE</button>
+
+  </form>
+</body>
+</html>

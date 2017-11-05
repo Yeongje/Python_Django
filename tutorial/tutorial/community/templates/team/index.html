@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Team</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <td><B>Team number</B></td>
+            <td><B>Studnet Name</B></td>
+            <td><B>Email</B></td>
+     <!--       <td><B>Area</B></td> -->
+
+        </tr>
+        </thead>
+        <tbody>
+        {% for Student in students %}
+        <tr>
+            <td><a href = "areas/{{Student.area}}/">{{Student.party_number}}</td>
+            <td>{{Student.name}}</td>
+            <td>{{Student.email}}</td>
+      <!--       <td> <a href = "areas/{{Candidate.area}}/"> {{Candidate.area}}</a> </td> -->
+
+        </tr>
+
+        {%endfor%}
+        <tbody>
+    </table>
+</body>

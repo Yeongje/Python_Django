@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Assignment</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <td><B>Assignment Title</B></td>
+            <td><B>Start Date</B></td>
+            <td><B>End Date</B></td>
+     <!--       <td><B>Area</B></td> -->
+
+        </tr>
+        </thead>
+        <tbody>
+        {% for Assignment in assignments %}
+        <tr>
+            <td><a href="/assessment_infor">{{Assignment.assignment_name}}</a></td>
+            <td>{{Assignment.start_date.year}} / {{Assignment.start_date.day}}/{{Assignment.start_date.month}} </td>
+            <td>{{Assignment.end_date.year}}/{{Assignment.end_date.day}}/{{Assignment.end_date.month}}</td>
+      <!--       <td> <a href = "areas/{{Candidate.area}}/"> {{Candidate.area}}</a> </td> -->
+
+        </tr>
+
+        {%endfor%}
+        <tbody>
+    </table>
+</body>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Apply Project</title>
+</head>
+<body>
+  <CENTER><B> Apply Project </B></CENTER>
+  {% block content %}
+  <form method="post" enctype="multipart/form-data">
+    {{ form.as_p }}
+    {% csrf_token %}
+
+    <button type="submit" onclick="/list" class="btn btn-primary">SAVE</button>
+  </form>
+  {% endblock %}
+</body>
+</html>
